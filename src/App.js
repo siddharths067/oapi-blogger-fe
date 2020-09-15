@@ -56,10 +56,11 @@ class Feed extends Component {
     }).then(res => {
       if(res.status !== 200)
         alert(`Your Session has expired or your title was empty`);
-      this.setState({
-        title: null,
-        content: null
-      })
+      window.location.reload(false);
+      // this.setState({
+      //   title: null,
+      //   content: null
+      // })
     }).catch(err => {
       console.error(err);
     })
