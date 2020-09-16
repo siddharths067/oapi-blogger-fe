@@ -87,6 +87,9 @@ class Feed extends Component {
         <Button variant={"contained"} label="Submit"
           type="submit">{"Post Story"}</Button>
       </form>
+      <a href={`http://localhost:3000/feed/${parseInt(this.props.match.params.offset)?parseInt(this.props.match.params.offset)-1:0}`}>
+        <Button variant={"contained"}>Previous Page</Button>
+      </a>
       <a href={`http://localhost:3000/feed/${parseInt(this.props.match.params.offset) + 1}`}>
         <Button variant={"contained"}>Next Page</Button>
       </a>
